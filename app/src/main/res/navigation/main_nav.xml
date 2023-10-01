@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.capisorteios_ktx.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroCompradorFragment"
+            app:destination="@id/cadastroCompradorFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroAdminFragment"
+            app:destination="@id/cadastroAdminFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroCompradorFragment"
+        android:name="br.com.capisorteios_ktx.CadastroCompradorFragment"
+        android:label="fragment_cadastro_comprador"
+        tools:layout="@layout/fragment_cadastro_comprador" >
+        <action
+            android:id="@+id/action_cadastroCompradorFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroAdminFragment"
+        android:name="br.com.capisorteios_ktx.CadastroAdminFragment"
+        android:label="fragment_cadastro_admin"
+        tools:layout="@layout/fragment_cadastro_admin" >
+        <action
+            android:id="@+id/action_cadastroAdminFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.capisorteios_ktx.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rifaFragment"
+            app:destination="@id/rifaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="br.com.capisorteios_ktx.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_cadastroRifaFragment"
+            app:destination="@id/cadastroRifaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroRifaFragment"
+        android:name="br.com.capisorteios_ktx.CadastroRifaFragment"
+        android:label="fragment_cadastro_rifa"
+        tools:layout="@layout/fragment_cadastro_rifa" >
+        <action
+            android:id="@+id/action_cadastroRifaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rifaFragment"
+        android:name="br.com.capisorteios_ktx.RifaFragment"
+        android:label="fragment_rifa"
+        tools:layout="@layout/fragment_rifa" >
+        <action
+            android:id="@+id/action_rifaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_rifaFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="br.com.capisorteios_ktx.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_rifaFragment"
+            app:destination="@id/rifaFragment" />
+        <action
+            android:id="@+id/action_paymentFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

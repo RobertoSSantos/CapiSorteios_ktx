@@ -1,0 +1,29 @@
+package br.com.capisorteios_ktx
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
+import br.com.capisorteios_ktx.databinding.ActivityMainBinding
+
+class LoginFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_login, container, false)
+
+        val btn = view.findViewById<Button>(R.id.btnLogin)
+        btn.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+        }
+
+        return view
+    }
+
+}

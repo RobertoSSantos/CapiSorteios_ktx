@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "28790835846",
+    "project_id": "capisorteios",
+    "storage_bucket": "capisorteios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28790835846:android:48e22c3a00b5ad433b9f07",
+        "android_client_info": {
+          "package_name": "br.com.capisorteios_ktx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNPe8o9yJKQtVzZSix3aQxG_7Se-dbMi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
