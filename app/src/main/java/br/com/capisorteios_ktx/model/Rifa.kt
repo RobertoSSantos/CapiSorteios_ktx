@@ -1,4 +1,4 @@
-package br.com.capisorteios_ktx
+package br.com.capisorteios_ktx.model
 
 data class Rifa (
     var titulo: String = "",

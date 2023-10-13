@@ -11,32 +11,11 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_cadastroCompradorFragment"
-            app:destination="@id/cadastroCompradorFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_cadastroAdminFragment"
-            app:destination="@id/cadastroAdminFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/cadastroCompradorFragment"
-        android:name="br.com.capisorteios_ktx.CadastroCompradorFragment"
-        android:label="fragment_cadastro_comprador"
-        tools:layout="@layout/fragment_cadastro_comprador" >
         <action
-            android:id="@+id/action_cadastroCompradorFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/cadastroAdminFragment"
-        android:name="br.com.capisorteios_ktx.CadastroAdminFragment"
-        android:label="fragment_cadastro_admin"
-        tools:layout="@layout/fragment_cadastro_admin" >
-        <action
-            android:id="@+id/action_cadastroAdminFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_loginFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -94,5 +73,14 @@
         <action
             android:id="@+id/action_paymentFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="br.com.capisorteios_ktx.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

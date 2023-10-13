@@ -19,8 +19,14 @@ class LoginFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
         val btn = view.findViewById<Button>(R.id.btnLogin)
+        val btnRegistro = view.findViewById<Button>(R.id.btnRegistro)
+
         btn.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+        }
+
+        btnRegistro.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_cadastroFragment)
         }
 
         return view
