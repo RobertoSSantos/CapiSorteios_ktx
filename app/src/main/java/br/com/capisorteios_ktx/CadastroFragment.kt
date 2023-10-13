@@ -50,22 +50,25 @@ class CadastroFragment : Fragment() {
             val senha = edtSenha.text.toString()
             val chavePix = edtPix.text.toString()
 
-            val usuario = if (checkAdm.isChecked) {
-                Consumidor(nome, cpf, email, senha, chavePix,true)
+            if (senha.length < 6){
+                Toast.makeText(context, "A senha precisa ter ao menos 6 caracteres", Toast.LENGTH_LONG).show()
             } else {
-                Consumidor(nome, cpf, email, senha, chavePix)
+                val usuario = if (checkAdm.isChecked) {
+                    Consumidor(nome, cpf, email, senha, chavePix,true)
+                } else {
+                    Consumidor(nome, cpf, email, senha, chavePix)
+                }
+
+                cadastrarUsuario(usuario)
             }
-
-            cadastrarUsuario(usuario)
         }
-
-
 
         return view
     }
 
     private fun cadastrarUsuario(usuario : Consumidor) = CoroutineScope(Dispatchers.IO).launch {
         try {
+            auth.createUserWithEmailAndPassword(usuario.email, usuario.senha).await()
             usuariosCollectionRef.add(usuario).await()
             withContext(Dispatchers.Main) {
                 Toast.makeText(context, "Usuario Adicionado com Sucesso", Toast.LENGTH_LONG).show()

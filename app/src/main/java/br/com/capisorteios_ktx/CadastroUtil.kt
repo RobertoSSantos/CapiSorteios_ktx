@@ -37,4 +37,21 @@ object CadastroUtil {
 
         return retorno
     }
+
+    fun validarCadastroUsuario(
+        nomeCompleto : String?,
+        cpf : String?,
+        email : String,
+        senha : String,
+        chavePix : String?,
+        isAdm : Boolean
+    ) : Boolean{
+        var retorno : Boolean = true
+
+        if (nomeCompleto == "" || cpf == "" || email == "" || senha == "" || chavePix == "") {
+            retorno = false
+        }
+
+        return retorno
+    }
 }
