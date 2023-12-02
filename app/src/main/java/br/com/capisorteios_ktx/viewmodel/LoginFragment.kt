@@ -1,4 +1,4 @@
-package br.com.capisorteios_ktx
+package br.com.capisorteios_ktx.viewmodel
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.fragment.app.findFragment
 import androidx.navigation.fragment.findNavController
-import br.com.capisorteios_ktx.databinding.ActivityMainBinding
+import br.com.capisorteios_ktx.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

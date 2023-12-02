@@ -1,4 +1,4 @@
-package br.com.capisorteios_ktx
+package br.com.capisorteios_ktx.viewmodel
 
 import java.lang.Exception
 import java.text.SimpleDateFormat
