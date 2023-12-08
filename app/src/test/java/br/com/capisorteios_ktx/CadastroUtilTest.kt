@@ -1,5 +1,6 @@
 package br.com.capisorteios_ktx
 
+import br.com.capisorteios_ktx.viewmodel.CadastroUtil
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
